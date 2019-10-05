@@ -19,7 +19,7 @@ namespace SMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection _sqlconn = new SqlConnection(@"Data Source=FACULTY18;Initial Catalog=SMS1;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+            SqlConnection _sqlconn = new SqlConnection(@"Data Source=.;Initial Catalog=SMS1;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             if (_sqlconn.State == ConnectionState.Closed)
                 _sqlconn.Open();
             SqlCommand _cmd = new SqlCommand("SELECT * FROM USERS WHERE USERNAME=@UNAME AND PASS =@PASS", _sqlconn);
